@@ -20,19 +20,14 @@ func main() {
 }
 
 func find_sum(nums []int) (sum int) {
-	m := make(map[int]int)
-
 	for i := 1; i < len(nums); i++ {
 		if nums[i] == nums[i-1] {
-			m[nums[i]] += 1
+			sum += nums[i]
 		}
 	}
 
 	if nums[0] == nums[len(nums)-1] {
-		m[nums[0]] += 1
-	}
-	for k, v := range m {
-		sum += k * v
+		sum += nums[0]
 	}
 
 	return
