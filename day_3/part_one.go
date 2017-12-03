@@ -6,7 +6,7 @@ import (
 
 func main() {
 	var size int
-	fmt.Print("Size of spiral (only odd numbers): ")
+	fmt.Print("Size of spiral: ")
 	_, err := fmt.Scanf("%d", &size)
 	if err != nil {
 		fmt.Println(err)
