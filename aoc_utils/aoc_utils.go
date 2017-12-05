@@ -16,6 +16,19 @@ func LoadInput(path string) string {
 	return string(file)
 }
 
+func ToSliceInt(s string) (out []int) {
+	s = strings.Trim(s, "\n")
+	for _, c := range strings.Fields(s) {
+		v, err := strconv.Atoi(string(c))
+		if err != nil {
+			fmt.Println(err)
+		} else {
+			out = append(out, v)
+		}
+	}
+	return
+}
+
 func ToInt(s string) (out []int) {
 	s = strings.Trim(s, "\n")
 	for _, c := range s {
